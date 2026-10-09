@@ -1,0 +1,43 @@
+{
+  "duration_seconds": 249.45,
+  "chapters": [
+    {
+      "title": "总览与业务入口",
+      "start": 0,
+      "end": 25.6
+    },
+    {
+      "title": "上传与 OCR",
+      "start": 25.6,
+      "end": 57.9
+    },
+    {
+      "title": "复核与全文证据",
+      "start": 57.9,
+      "end": 91.9
+    },
+    {
+      "title": "匹配与税前分摊",
+      "start": 91.9,
+      "end": 124.7
+    },
+    {
+      "title": "Ask 查询与原文引用",
+      "start": 124.7,
+      "end": 171.45
+    },
+    {
+      "title": "票据资金与固定凭证",
+      "start": 171.45,
+      "end": 207.45
+    },
+    {
+      "title": "Studio 与企业管理",
+      "start": 207.45,
+      "end": 249.45
+    }
+  ],
+  "data": "Synthetic values reconstructed from test_data geometry; no original text, pixels or metadata.",
+  "editing": "Processing waits cut; not a performance benchmark.",
+  "narration": "Chinese synthesized narration"
+}

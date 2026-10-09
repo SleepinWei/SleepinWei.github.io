@@ -1,3 +1,7 @@
+## 汇千流 LedgerAsk
+
+[核心功能与完整脱敏演示](https://sleepinwei.github.io/ledgerask/)：合同与发票处理、可追溯 AI 问答、票据资金子账和流程协作。
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/SleepinWei/SleepinWei.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
