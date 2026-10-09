@@ -1,43 +1,64 @@
 {
-  "duration_seconds": 249.45,
+  "duration_seconds": 249.4,
   "chapters": [
     {
       "title": "总览与业务入口",
       "start": 0,
-      "end": 25.6
+      "end": 25.55,
+      "video": "assets/chapters/01-overview.mp4",
+      "captions": "assets/chapters/01-overview.vtt",
+      "duration_seconds": 25.55
     },
     {
       "title": "上传与 OCR",
-      "start": 25.6,
-      "end": 57.9
+      "start": 25.55,
+      "end": 57.85,
+      "video": "assets/chapters/02-upload-ocr.mp4",
+      "captions": "assets/chapters/02-upload-ocr.vtt",
+      "duration_seconds": 32.3
     },
     {
       "title": "复核与全文证据",
-      "start": 57.9,
-      "end": 91.9
+      "start": 57.85,
+      "end": 91.85,
+      "video": "assets/chapters/03-review-evidence.mp4",
+      "captions": "assets/chapters/03-review-evidence.vtt",
+      "duration_seconds": 34.0
     },
     {
       "title": "匹配与税前分摊",
-      "start": 91.9,
-      "end": 124.7
+      "start": 91.85,
+      "end": 124.65,
+      "video": "assets/chapters/04-matching-allocation.mp4",
+      "captions": "assets/chapters/04-matching-allocation.vtt",
+      "duration_seconds": 32.8
     },
     {
       "title": "Ask 查询与原文引用",
-      "start": 124.7,
-      "end": 171.45
+      "start": 124.65,
+      "end": 171.4,
+      "video": "assets/chapters/05-ask-citations.mp4",
+      "captions": "assets/chapters/05-ask-citations.vtt",
+      "duration_seconds": 46.75
     },
     {
       "title": "票据资金与固定凭证",
-      "start": 171.45,
-      "end": 207.45
+      "start": 171.4,
+      "end": 207.4,
+      "video": "assets/chapters/06-funds-evidence.mp4",
+      "captions": "assets/chapters/06-funds-evidence.vtt",
+      "duration_seconds": 36.0
     },
     {
       "title": "Studio 与企业管理",
-      "start": 207.45,
-      "end": 249.45
+      "start": 207.4,
+      "end": 249.4,
+      "video": "assets/chapters/07-studio-management.mp4",
+      "captions": "assets/chapters/07-studio-management.vtt",
+      "duration_seconds": 42.0
     }
   ],
   "data": "Synthetic values reconstructed from test_data geometry; no original text, pixels or metadata.",
   "editing": "Processing waits cut; not a performance benchmark.",
-  "narration": "Chinese synthesized narration"
+  "narration": "Alibaba Cloud qwen-audio-3.1-tts-next, generated male Mandarin narrator"
 }
