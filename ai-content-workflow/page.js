@@ -23,11 +23,11 @@ dialog.addEventListener('click',event=>{
 });
 const video=document.querySelector('#sample-video');
 const status=document.querySelector('#video-status');
-document.querySelectorAll('[data-seek]').forEach(button=>button.addEventListener('click',async()=>{
+document.querySelectorAll('[data-seek]').forEach((button,index)=>button.addEventListener('click',async()=>{
   const seconds=Number(button.dataset.seek);
   const seek=()=>{video.currentTime=seconds;};
   if(video.readyState>=1)seek();else video.addEventListener('loadedmetadata',seek,{once:true});
-  try{await video.play();status.textContent=`正在播放第 ${Math.floor(seconds/5)+1} 个镜头。`;}catch{status.textContent='请在播放器中点击播放，或下载 MP4 样片。';}
+  try{await video.play();status.textContent=`正在播放第 ${index+1} 个片段：${button.querySelector('strong').textContent}。`;}catch{status.textContent='请在播放器中点击播放，或下载 MP4 样片。';}
 }));
 video.addEventListener('error',()=>{status.textContent='视频暂时无法载入，可下载 MP4 样片查看。';});
 video.addEventListener('ended',()=>{status.textContent='样片播放完成。';});

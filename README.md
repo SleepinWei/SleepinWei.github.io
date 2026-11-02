@@ -6,7 +6,7 @@
 
 [案例介绍与实际产出](https://sleepinwei.github.io/ai-content-workflow/) · [直接体验工作台](https://sleepinwei.github.io/ai-content-workflow/studio/)
 
-以虚构母婴纺织品品牌演示产品输入、品牌模板、多尺寸图片、人工审核、ZIP 导出与 15 秒图片动效视频。页面列明已实现能力及正式项目待接入范围。
+以虚构母婴纺织品品牌演示产品输入、品牌模板、多尺寸图片、人工审核与 ZIP 导出，附 10 秒亲子互动广告样片和本地图片动效制作体验。页面列明已实现能力及正式项目待接入范围。
 
 ## Welcome to GitHub Pages
 
