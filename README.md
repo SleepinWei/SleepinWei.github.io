@@ -2,6 +2,12 @@
 
 [核心功能与完整脱敏演示](https://sleepinwei.github.io/ledgerask/)：合同与发票处理、可追溯 AI 问答、票据资金子账和流程协作。
 
+## 品牌素材工作流样例
+
+[案例介绍与实际产出](https://sleepinwei.github.io/ai-content-workflow/) · [直接体验工作台](https://sleepinwei.github.io/ai-content-workflow/studio/)
+
+以虚构母婴纺织品品牌演示产品输入、品牌模板、多尺寸图片、人工审核、ZIP 导出与 15 秒图片动效视频。页面列明已实现能力及正式项目待接入范围。
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/SleepinWei/SleepinWei.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.

@@ -1,0 +1,33 @@
+{
+  "created_date": "2026-11-02",
+  "tool": "built-in image_gen",
+  "fictional_brand": true,
+  "fictional_product": true,
+  "assets": [
+    {
+      "file": "product-sage.png",
+      "role": "product source with transparent alpha",
+      "prompt": "Use case: product-mockup. Asset type: source product photograph for a fictional baby textile brand workflow demonstration. Generate one photorealistic sage green double-gauze muslin blanket neatly folded into a thick rectangular bundle, three quarter view from slightly above, lying flat. Product centered and fills about 72% of a square composition. Soft cotton gauze woven crinkle texture, hem stitching visible, plain solid muted sage green color, no patterns. Natural studio light from upper left, delicate realistic shadow only directly under the blanket. Transparent background, isolated cutout with clean alpha edges; do not include a table or floor. This is a fictional demonstration product, no baby, no people, no accessories, no text, no logo, no watermark. Keep the entire blanket inside the frame."
+    },
+    {
+      "file": "nordic-room.png",
+      "role": "pre-generated lifestyle background plate",
+      "prompt": "Use case: photorealistic-natural. Asset type: empty lifestyle background plate for product compositing in a fictional Nordic minimal baby textile brand demo. Photograph a tranquil sunlit Scandinavian room: warm ivory plaster wall, pale natural oak low bench in the lower half, translucent white linen curtain at the far left, a small ceramic vase with one eucalyptus stem far right. A broad clear empty flat bench surface occupies the central lower part of the frame and must be suitable for placing a folded blanket. Warm morning light from upper left, gentle soft shadows, desaturated ivory, sand and sage palette. No blanket, no bedding product, no people, no baby, no crib, no text, no logo, no watermark. Square high-quality product photography backdrop, quiet premium composition."
+    },
+    {
+      "file": "lifestyle-scene.png",
+      "role": "AI reference-based lifestyle composite generated before the browser run",
+      "references": [
+        "product-sage.png",
+        "nordic-room.png"
+      ],
+      "prompt": "Use case: compositing. Create one finished high-end product lifestyle photograph by placing the exact folded sage-green muslin blanket from reference image 1 naturally ON the oak bench in reference image 2. Reference 1 is the product identity; reference 2 is the room and background. Preserve the same folded blanket silhouette, sage color, visible gauze crinkle texture and hem stitching; do not change the product design. Match camera perspective and morning light, add a subtle physically correct contact shadow, and ensure the blanket rests fully on the upper surface of the bench rather than floating in front of it. Place the blanket at the center of the bench, filling around 40% of image width, with large clean wall space above. Keep the white linen curtain on left and ceramic vase on far right. Square product photography, no people, no baby, no new accessories, no text, no logo, no watermark."
+    }
+  ],
+  "runtime": {
+    "images": "browser Canvas deterministic composition",
+    "brand_retrieval": "local required-rule matching",
+    "video": "browser still-image motion recording or FFmpeg still-image edit",
+    "live_generation_api_in_web_app": false
+  }
+}

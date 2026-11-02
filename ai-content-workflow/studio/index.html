@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="虚构母婴品牌的素材工作流样例。产品输入、品牌规则、批量合成、人工审核、图片导出及15秒动效视频。">
+  <title>Moss & Cotton · 品牌素材工作台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="#studio" class="wordmark"><svg viewBox="0 0 36 42" aria-hidden="true"><path d="M18 39V15M18 28C3 29 2 13 3 8c12 0 16 10 15 20ZM18 20C31 20 34 7 32 2 21 3 17 11 18 20Z"/></svg><span>Moss<br><em>& Cotton</em></span></a>
+    <div class="workspace-label">品牌素材工作台<span>虚构品牌 · 功能样例</span></div>
+    <nav aria-label="工作台导航">
+      <button data-view="studio" class="nav-item active"><span aria-hidden="true">▦</span>素材生产</button>
+      <button data-view="library" class="nav-item"><span aria-hidden="true">▧</span>审核与素材库<span id="nav-count" class="nav-count">0</span></button>
+      <button data-view="brand" class="nav-item"><span aria-hidden="true">⌘</span>品牌规范</button>
+      <button data-view="guide" class="nav-item"><span aria-hidden="true">↗</span>样例说明</button>
+    </nav>
+    <div class="sidebar-bottom"><span class="online-dot"></span>本地素材引擎<div>AI 底图已载入<br>本次操作不调用付费模型</div><a href="assets/sample-video.mp4" download id="side-video" hidden>下载已有 MP4 样片 ↗</a></div>
+  </aside>
+  <main>
+    <header class="topbar"><div id="breadcrumb">工作台 <span>/</span> 素材生产</div><div class="top-meta"><a class="back-to-case" href="../">← 案例介绍</a><span class="avatar">M</span></div></header>
+    <section id="view-studio" class="view active" aria-labelledby="studio-title">
+      <div class="page-heading"><div><div class="eyebrow">CONTENT STUDIO</div><h1 id="studio-title">一件产品，一组素材。</h1><p>从产品原图开始，生成、审核，再交到运营手里。</p></div><button class="button subtle" id="load-example">恢复示例产品</button></div>
+      <div class="flow-strip" aria-label="生产流程"><span class="done"><i>1</i>产品资料</span><b>→</b><span class="done"><i>2</i>品牌规则</span><b>→</b><span id="flow-compose"><i>3</i>批量合成</span><b>→</b><span id="flow-review"><i>4</i>人工审核</span><b>→</b><span id="flow-deliver"><i>5</i>素材交付</span></div>
+      <div class="production-grid">
+        <section class="source-panel panel" aria-labelledby="source-title">
+          <div class="panel-title"><h2 id="source-title">产品与原图</h2><span class="quiet">01 / 输入</span></div>
+          <div class="product-photo"><span class="photo-label">示例产品原图 · AI 生成</span><img src="assets/product-sage.png" id="source-image" alt="鼠尾草绿棉纱毯示例产品，透明背景"><div class="swatch-caption"><span></span>Sage green <small>鼠尾草绿</small></div></div>
+          <div class="source-fields"><label>产品名称<input id="product-name" value="棉纱日常毯" maxlength="24"></label><label>SKU<input id="product-sku" value="MC-MUSLIN-SAGE-01" maxlength="40"></label><label class="wide">一句产品文案<input id="product-caption" value="Soft texture. Quiet moments." maxlength="70"></label></div>
+          <div class="upload-row"><label class="button subtle upload">替换产品原图<input id="product-upload" type="file" accept="image/png,image/jpeg,image/webp" hidden></label><small>透明 PNG 效果最佳，限 6 MB<br>白底图上传后会保留原背景</small></div>
+        </section>
+        <section class="recipe-panel panel" aria-labelledby="recipe-title">
+          <div class="panel-title"><h2 id="recipe-title">这次做些什么</h2><span class="quiet">02 / 配方</span></div>
+          <div class="recipe-section"><div class="field-heading">素材模板 <span>可多选</span></div><div class="template-options">
+            <label class="template-option"><input type="checkbox" name="template" value="white" checked><div class="mini-preview white-mini"><img src="assets/product-sage.png" alt=""></div><div><strong>白底商品图</strong><span>保留商品原图与细节</span></div></label>
+            <label class="template-option"><input type="checkbox" name="template" value="scene" checked><div class="mini-preview scene-mini"></div><div><strong>北欧生活场景</strong><span>AI 参考样图 · 品牌排版</span></div></label>
+            <label class="template-option"><input type="checkbox" name="template" value="social" checked><div class="mini-preview social-mini"><img src="assets/product-sage.png" alt=""></div><div><strong>社媒品牌卡片</strong><span>品牌字体与文案排版</span></div></label>
+          </div></div>
+          <div class="recipe-section"><div class="field-heading">输出尺寸</div><div class="ratio-options"><label><input type="checkbox" name="ratio" value="1:1" checked><span class="ratio-icon square"></span><div>1:1<small>1080 × 1080</small></div></label><label><input type="checkbox" name="ratio" value="4:5" checked><span class="ratio-icon portrait"></span><div>4:5<small>1080 × 1350</small></div></label><label><input type="checkbox" name="ratio" value="9:16"><span class="ratio-icon vertical"></span><div>9:16<small>1080 × 1920</small></div></label></div></div>
+          <div class="rule-match"><span class="online-dot"></span><div><strong>已匹配品牌规范 v1</strong><p id="matched-rules">鼠尾草绿 · 米白 · 浅木纹；场景图片需人工复核。</p><small>本地规则匹配，未接向量检索或在线大模型。</small></div><button class="text-button" data-open-brand>查看</button></div>
+          <div class="run-row"><div><strong id="expected-count">将生成 6 张素材</strong><small>合成在当前浏览器执行</small></div><button class="button primary" id="generate" disabled>正在载入素材… <span>↗</span></button></div>
+        </section>
+      </div>
+      <section class="results-section" aria-labelledby="results-title"><div class="section-heading"><div><h2 id="results-title">本次生产任务 <span id="job-count">0</span></h2><p id="job-summary">准备好后，生成第一组素材。</p></div><button class="text-button" data-view="library">进入审核与素材库 →</button></div><div id="studio-results" class="asset-grid"></div><div id="empty-state" class="empty-state"><span class="empty-mark">↗</span><div><strong>产品和模板都准备好了</strong><p>点击「生成素材」，得到可预览、可审核、可下载的真实图片。</p></div></div></section>
+    </section>
+    <section id="view-library" class="view" aria-labelledby="library-title"><div class="page-heading"><div><div class="eyebrow">REVIEW & DELIVER</div><h1 id="library-title">审核与素材库</h1><p>只把已确认的图片交付出去，每张图都能追溯到原始输入。</p></div><button class="button subtle" id="approve-all">通过全部待审素材</button></div>
+      <div class="library-toolbar"><div class="filters" role="group" aria-label="素材状态筛选"><button class="selected" data-filter="all">全部 <span id="count-all">0</span></button><button data-filter="pending">待审核 <span id="count-pending">0</span></button><button data-filter="approved">已通过 <span id="count-approved">0</span></button><button data-filter="rejected">已退回 <span id="count-rejected">0</span></button></div><button class="button primary" id="export-package" disabled>导出已通过素材包 ↓</button></div>
+      <div id="library-results" class="asset-grid"></div><p id="library-empty" class="empty-state">还没有素材，请先到「素材生产」生成一组。</p>
+      <section class="video-panel panel"><div><div class="eyebrow">STORYBOARD TO VIDEO</div><h2>把通过的图片，剪成一支短片。</h2><p>3 个镜头 · 15 秒 · 9:16 · 无声动效剪辑<br>使用已通过素材做推近和转场，未调用视频生成模型。</p><button class="button primary" id="make-video" disabled>制作 15 秒视频 ↗</button><button class="button subtle" id="cancel-video" hidden>取消制作</button><p id="video-progress" role="status">至少通过 3 张图片后可制作。</p><a class="text-button" id="download-video" hidden>下载本次视频 ↓</a><a href="assets/sample-video.mp4" class="text-button" id="download-sample" download hidden>下载已有 MP4 样片 ↓</a></div><div class="video-preview"><video id="video-player" controls playsinline preload="metadata" hidden></video><div id="video-placeholder"><span>▶</span><p>审核后生成短片</p></div></div></section>
+    </section>
+    <section id="view-brand" class="view" aria-labelledby="brand-title"><div class="page-heading"><div><div class="eyebrow">BRAND GUIDELINES</div><h1 id="brand-title">把调性写成可复用的规则。</h1><p>修改品牌文案和色彩后，再次生成即可得到新版本素材。</p></div><button class="button primary" id="save-brand">应用品牌规范</button></div><div class="brand-grid"><section class="panel brand-editor"><h2>品牌配置</h2><label>品牌名称<input id="brand-name" value="Moss & Cotton" maxlength="32"></label><label>系列名称<input id="brand-collection" value="Everyday softness" maxlength="36"></label><label>主色<input id="brand-color" type="color" value="#627462"></label><label>品牌简介<textarea id="brand-description" rows="4" maxlength="300">北欧简约母婴纺织品示例品牌。米白、鼠尾草绿与浅木纹，使用自然光，保留棉纱真实纹理，文案简短。</textarea></label><label>审核规则<textarea id="brand-constraints" rows="4" maxlength="500">商品主体不变形；不改变颜色和花型；不编造材质、认证或功效；图片发布前由人工确认。</textarea></label></section><section class="brand-specimen"><p>THE BRAND PALETTE</p><div class="palette"><div style="background:#627462"><span>Sage</span><small>#627462</small></div><div style="background:#f4f1e8;color:#4a4b43"><span>Oat</span><small>#F4F1E8</small></div><div style="background:#d5c8ad;color:#4a4b43"><span>Oak</span><small>#D5C8AD</small></div></div><h2>Quiet by nature.<br>Soft by design.</h2><p>规范与来源会写入每次导出的 manifest.json。当前样例采用本地规则检索；正式项目可将这一层替换为有来源引用的 RAG。</p><button class="button subtle" id="export-brand">下载品牌配置 JSON ↓</button></section></div></section>
+    <section id="view-guide" class="view" aria-labelledby="guide-title"><div class="page-heading"><div><div class="eyebrow">WORKING SAMPLE</div><h1 id="guide-title">这个样例实际做了什么</h1><p>可操作、可导出，也保留清晰的能力范围。</p></div></div><div class="guide-content"><section><h2>已经可以操作</h2><p>上传产品原图、编辑品牌规范、选择三种模板和尺寸、批量合成 PNG、逐张预览、人工通过或退回、重做被退回素材、导出含图片和溯源信息的 ZIP，以及从通过的图片制作 15 秒动效视频。</p></section><section><h2>素材与执行方式</h2><p>棉纱毯原图、北欧底图，以及基于这两张参考图生成的生活场景，由本次 AI 图像生成工具预先生成，品牌与商品均为虚构示例。网页中的批量操作采用 Canvas 本地合成，会实际生成文件。品牌资料使用本地关键词规则匹配，视频使用浏览器录制或本地 FFmpeg 剪辑。</p></section><section><h2>正式接入时的替换点</h2><p>把预生成底图替换为图片模型 API，把本地规则匹配替换为品牌知识库检索，把本地任务状态接入持久队列；视频生成、模型费用结算、用户权限、多 SKU 适配及目标市场合规验证在正式实施时另行完成。</p></section><section><h2>商品一致性检查</h2><p>白底与社媒模板复用同一份商品原图；默认场景采用预先生成的 AI 参考样图，商品折叠形态可能有变化，必须人工核对。上传自己的产品后，场景模板改为原图与底图的本地合成。背景透视、接触阴影、细节边缘和目标渠道规范仍需运营审核；样例素材不代表真实商品拍摄或平台审核通过。</p></section><section><h2>数据与交付</h2><p>页面状态保存在当前标签页内，刷新会清空。产品图不会被发送至第三方模型服务。ZIP 包包含已通过的 PNG、品牌配置、产品输入、规则来源、提示词、分镜信息与已制作的视频。</p><a href="assets/source-prompts.json" download class="text-button">下载本次 AI 底图提示词与来源 ↓</a></section></div></section>
+    <footer class="page-footer">Moss & Cotton 是虚构示例品牌。<span>AI 底图预生成 · 本地合成 · 人工审核 · 可导出</span></footer>
+  </main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="preview-dialog"><button class="dialog-close" aria-label="关闭预览">×</button><div class="preview-body"><img id="preview-image" alt="素材大图预览"><div><span class="eyebrow">ASSET REVIEW</span><h2 id="preview-title"></h2><p id="preview-meta"></p><p class="review-checklist">请检查颜色、花型、轮廓、文案与边缘。通过仅代表本次人工确认。</p><button class="button primary" id="preview-approve">审核通过</button><button class="button subtle" id="preview-reject">退回重做</button><button class="text-button" id="preview-download">下载 PNG ↓</button><details><summary>查看生成记录</summary><pre id="preview-record"></pre></details></div></div></dialog>
+<dialog id="reject-dialog"><h2>记录返工原因</h2><label>需要调整的内容<textarea id="reject-reason" rows="3" placeholder="例如：商品太小，文字与背景对比不足" maxlength="200"></textarea></label><div class="dialog-actions"><button class="button subtle" id="reject-cancel">取消</button><button class="button primary" id="reject-confirm">确认退回</button></div></dialog>
+<script src="app.js" defer></script>
+</body></html>
